@@ -1,8 +1,5 @@
-<!OCTYPE html>
-<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">l<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday Cutush 🎂</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 <style>
@@ -364,32 +361,5 @@ function spawnFloater() {
   const dur = 5 + Math.random() * 8;
   el.style.animationDuration = dur + 's';
   el.style.fontSize = (1 + Math.random() * 1.5) + 'rem';
-  el.style.animationDelay = (Math.random() * 3) + 's';
-  container.appendChild(el);
-  setTimeout(() => el.remove(), (dur + 3) * 1000);
-}
+  
 
-// spawn floaters continuously
-for (let i = 0; i < 18; i++) {
-  setTimeout(spawnFloater, i * 400);
-}
-setInterval(spawnFloater, 600);
-
-function openGallery() {
-  document.getElementById('gallery').classList.add('open');
-  document.body.style.overflow = 'hidden';
-  // Re-trigger animations
-  document.querySelectorAll('.photo-card').forEach(c => {
-    c.style.animation = 'none';
-    c.offsetHeight;
-    c.style.animation = '';
-  });
-}
-
-function closeGallery() {
-  document.getElementById('gallery').classList.remove('open');
-  document.body.style.overflow = '';
-}
-</script>
-</body>
-</html>
